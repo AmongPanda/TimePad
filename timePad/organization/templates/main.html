@@ -61,24 +61,24 @@
             </div>
 
             <div class="card">
+                {% for el in events %}
                 <div class="container-tape ct">
                     <div class="cont-tape">
                         
                       <div class="url-tape ct-1 ">
-                        <a href="#">Техника</a>
+
                       </div>
     
                         <div class="text-tape">
                             <div class="text-tape-center">
-                                <h5>Стиральная машинка Bosch</h5>
+                                <h5>el.name</h5>
                                 <p class="description-tape">
-                                    Уходящий год для айтишников прошёл под девизом: «Work
-                                    hard, learn more».
+                                    el.description
                                 </p>
-                                <p class="price-tape">1000 Р</p>
+                                <p class="price-tape">el.tickets.price</p>
             
                                 <div class="date-watch">
-                                    <p>14 апреля 2021</p>
+                                    <p>el.date</p>
                                     <div class="eye-wach">
                                     <img src="./img/main/eye.svg" alt="" />
                                     <p>356</p>
@@ -115,10 +115,7 @@
 
 
                       <div class="cont-tape">
-                        <div class="url-tape ct-1 ">
-                            <img src="{% static '/files/images/rose.png' %}">
 
-                        </div>
       
                           <div class="text-tape">
                               <div class="text-tape-center">
