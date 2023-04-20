@@ -22,7 +22,6 @@ class Event(models.Model):
     date = models.DateTimeField(null=True, verbose_name='Дата и время мероприятия')  # Дата и время мероприятия
     tickets = models.ForeignKey(Ticket, on_delete=models.CASCADE,null=True, verbose_name='Доступные билеты для мероприятия')  # Доступные билеты для мероприятия
 
-
     class Meta:
         verbose_name_plural = "Мероприятия"
         ordering = ['name']
@@ -48,7 +47,7 @@ class UserOrg(models.Model):
                                 verbose_name='Имя')  # Ссылка на стандартную модель пользователя Django
     phone_number = models.CharField(max_length=20, null=True,
                                     verbose_name='Номер телефона пользователя')  # Номер телефона пользователя
-    address = models.CharField(max_length=200, null=True, verbose_name='Адрес пользователя')  # Адрес пользователя
+    adress = models.CharField(max_length=200, null=True, verbose_name='Адрес пользователя')  # Адрес пользователя
     age_user = models.IntegerField(default=0, null=True, verbose_name='Возраст пользователя')
     event = models.ForeignKey(Event, on_delete=models.CASCADE, null=True, verbose_name='Выбери мероприятие')
 
