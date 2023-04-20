@@ -1,8 +1,8 @@
-<<<<<<< HEAD
+
 from django.shortcuts import render
 
 # Create your views here.
-=======
+
 from django.shortcuts import render, redirect
 from django.utils import timezone
 
@@ -48,4 +48,4 @@ def ticket_view(request):
     else:
         form = TicketForm()
     return render(request, '.html', {'form': form})
->>>>>>> d1a007a343f75ad4b37c24b1f2fb509eeda70764
+
