@@ -1,10 +1,117 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static '/css/style.css' %}">
+    <link rel="apple-touch-icon" sizes="180x180" href="files/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="files/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="files/favicon-16x16.png">
+    <link rel="manifest" href="files/site.webmanifest">
+    <title>TimeTicket_OMGSoft</title>
 </head>
-<body>
+<body class="body-merom">
+    <header>
+        <nav class="navbar">
 
+            <ul class="navbar-left">
+
+              <li><a href="index.html">Главная</a></li>
+              <li class="active"><a href="meropriyatia.html">Создать мероприятие</a></li>
+              <li><a href="makeorg.html">Создать организацию</a></li>
+            </ul>
+            <ul class="navbar-right">
+              <li><a href="register.html">Зарегистрироваться</a></li>
+              <li><a href="sign_in.html">Войти</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="body-sec">
+        <div >
+
+                <div class="const-flex">
+
+                    <div class="const-mer">
+                     <h1 style="margin-bottom: 15px; margin-top: 15px;">Создайте мероприятие!</h1>
+                     <ul class="ul-mer">
+                         <li>Название
+                             <input type="text" name="title">
+                         </li>
+                         <li>Дата <form action="" style="display: inline-block;"><input type="text"></form>
+
+
+                         </li>
+                         <li>Возраст
+                             <form  action="" style="display: inline-block;">
+                                <input type="number">
+                             </form>
+                         </li>
+                         <li>Цена <form action="" style="display: inline-block;"><input type="text"></form>
+
+
+                         </li>
+
+                         <li class="file-upload">Фото
+
+                            <input type="file" id="file" name="file multiple">
+                            <label for="file" class="file-upload__button">Выбериет файл</label>
+
+                         </li>
+                         <li>Описание <form action=""><textarea name="" id="" cols="30" rows="10"></textarea></form>
+                         </li>
+                     </ul>
+                     <div class="button">
+                        <button>Отправить</button>
+                     </div>
+
+                    </div>
+
+
+
+                 </div>
+                </div>
+        </div>
+    </section>
+
+<h2>Create Event</h2>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Create</button>
+  </form>
+
+
+    <footer>
+        <div class="footer-container">
+          <div class="footer-column">
+            <h3 class="footer-heading">Контакты</h3>
+            <ul>
+              <li><a href="tel:+1234567890">+1 (234) 567-890</a></li>
+              <li><a href="mailto:info@example.com">info@example.com</a></li>
+              <li><a href="#">Адрес офиса</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3 class="footer-heading">Ссылки</h3>
+            <ul>
+              <li><a href="#">Главная</a></li>
+              <li><a href="#">Создайте мероприятие</a></li>
+              <li><a href="#">Регистрация</a></li>
+              <li><a href="#">Войти</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3 class="footer-heading">Подписка</h3>
+            <p>Подпишитесь на нашу рассылку, чтобы получать новости и специальные предложения:</p>
+            <form action="#">
+              <input type="email" placeholder="Введите ваш email">
+              <button type="submit">Подписаться</button>
+            </form>
+          </div>
+        </div>
+      </footer>
 </body>
 </html>

@@ -29,15 +29,7 @@ def add_event(request):
         form = EventForm()
     return render(request, 'main.html', {'form': form})
 ##############################################################
-def user_view(request):
-    if request.method == 'POST':
-        form = ParticipantsForm(request.POST)
-        if form.is_valid():
-            form.save()
-            return redirect('participants')
-    else:
-        form = ParticipantsForm()
-    return render(request, '.html', {'form': form})
+
 ##############################################################
 def ticket_view(request):
     if request.method == 'POST':
