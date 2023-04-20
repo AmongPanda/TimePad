@@ -8,12 +8,7 @@ from .forms import *
 
 def main(request):
     events = Event.objects.all()
-    now = timezone.now()
-    context = {
-        'now': now,
-        'events': events
-    }
-    return render(request, 'main.html', context)
+    return render(request, 'main.html', {'events': events})
 
 ##############################################################
 def events(request):

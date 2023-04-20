@@ -22,11 +22,4 @@ class UserOrgForm(forms.Form):
     class Meta:
         model = UserOrg
         field = ['user', 'phone_number', 'address', 'age_user', 'event']
-        fields = ['name', 'description', 'price', 'tariff']
-
-
-class UserOrgForm(forms.ModelForm):
-    class Meta:
-        model = UserOrg
-        fields = ['user', 'phone_number', 'adress', 'age_user', 'event']
 
