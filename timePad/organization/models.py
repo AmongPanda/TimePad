@@ -22,6 +22,7 @@ class Event(models.Model):
     date = models.DateTimeField(null=True, verbose_name='Дата и время мероприятия')  # Дата и время мероприятия
     tickets = models.ForeignKey(Ticket, on_delete=models.CASCADE,null=True, verbose_name='Доступные билеты для мероприятия')  # Доступные билеты для мероприятия
 
+
     class Meta:
         verbose_name_plural = "Мероприятия"
         ordering = ['name']
@@ -51,15 +52,10 @@ class UserOrg(models.Model):
     age_user = models.IntegerField(default=0, null=True, verbose_name='Возраст пользователя')
     event = models.ForeignKey(Event, on_delete=models.CASCADE, null=True, verbose_name='Выбери мероприятие')
 
+
     class Meta:
         verbose_name_plural = "Пользователи"
         ordering = ['user']
     def __str__(self):
         return str(self.user)
-
-
-
-
-
-
 

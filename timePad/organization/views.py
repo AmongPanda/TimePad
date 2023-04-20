@@ -1,3 +1,4 @@
+from django.shortcuts import render
 
 from django.shortcuts import render, redirect
 from django.utils import timezone
@@ -23,7 +24,7 @@ def events(request):
             return redirect('main')
     else:
         form = EventForm()
-    return render(request, 'main.html', {'form': form})
+    return render(request, 'events.html', {'form': form})
 ##############################################################
 
 def user_org(request):
@@ -46,4 +47,3 @@ def tickets(request):
     else:
         form = TicketForm()
     return render(request, '.html', {'form': form})
-
