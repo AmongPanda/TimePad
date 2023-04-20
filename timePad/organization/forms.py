@@ -13,3 +13,8 @@ class TicketForm(forms.ModelForm):
         model = Ticket
         fields = ['name_ticket', 'name_participants', 'description_ticket', 'image_ticket', 'price_ticket',
                   'email_participants']
+
+class UserOrgForm(forms.Form):
+    class Meta:
+        model = UserOrg
+        field = ['user', 'phone_number', 'address', 'age_user', 'event']

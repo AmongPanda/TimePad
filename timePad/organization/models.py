@@ -8,14 +8,13 @@ class Ticket(models.Model):
     price = models.DecimalField(max_digits=6, decimal_places=2, null=True, verbose_name='Цена билета')  # Цена билета
     tariff = models.CharField(max_length=50, null=True, verbose_name='Тариф билета')  # Тариф билета
 
-<<<<<<< HEAD
-=======
+
     class Meta:
         verbose_name_plural = "Билеты"
         ordering = ['name']
     def __str__(self):
         return str(self.name)
->>>>>>> d1a007a343f75ad4b37c24b1f2fb509eeda70764
+
 
 class Event(models.Model):
     name = models.CharField(max_length=200, null=True, verbose_name='Название мероприятия')  # Название мероприятия
@@ -23,15 +22,13 @@ class Event(models.Model):
     date = models.DateTimeField(null=True, verbose_name='Дата и время мероприятия')  # Дата и время мероприятия
     tickets = models.ForeignKey(Ticket, on_delete=models.CASCADE,null=True, verbose_name='Доступные билеты для мероприятия')  # Доступные билеты для мероприятия
 
-<<<<<<< HEAD
 
-=======
     class Meta:
         verbose_name_plural = "Мероприятия"
         ordering = ['name']
     def __str__(self):
         return str(self.name)
->>>>>>> d1a007a343f75ad4b37c24b1f2fb509eeda70764
+
 
 # class Discount(models.Model):
 #     name = models.CharField(max_length=200, null=True, verbose_name='Название скидки')  # Название скидки
@@ -55,14 +52,12 @@ class UserOrg(models.Model):
     age_user = models.IntegerField(default=0, null=True, verbose_name='Возраст пользователя')
     event = models.ForeignKey(Event, on_delete=models.CASCADE, null=True, verbose_name='Выбери мероприятие')
 
-<<<<<<< HEAD
-=======
     class Meta:
         verbose_name_plural = "Пользователи"
         ordering = ['user']
     def __str__(self):
         return str(self.user)
->>>>>>> d1a007a343f75ad4b37c24b1f2fb509eeda70764
+
 
 
 
