@@ -15,11 +15,10 @@ class EventForm(forms.ModelForm):
 class TicketForm(forms.ModelForm):
     class Meta:
         model = Ticket
-        fields = ['name_ticket', 'name_participants', 'description_ticket', 'image_ticket', 'price_ticket',
-                  'email_participants']
+        fields = ['name', 'description', 'price', 'tariff']
 
 class UserOrgForm(forms.Form):
     class Meta:
         model = UserOrg
-        field = ['user', 'phone_number', 'address', 'age_user', 'event']
+        field = ['user', 'phone_number', 'adress', 'age_user', 'event']
 
