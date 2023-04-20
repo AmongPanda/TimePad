@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static '/css/style.css' %}">
+    <link rel="apple-touch-icon" sizes="180x180" href="files/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="files/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="files/favicon-16x16.png">
+    <link rel="manifest" href="files/site.webmanifest">
+    <title>TimeTicket_OMGSoft</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            
+            <ul class="navbar-left">
+                
+              <li><a href="/">Главная</a></li>
+              <li><a href="meropriyatia.html">Создать мероприятие</a></li>
+            </ul>
+            <ul class="navbar-right">
+              <li><a href="register.html">Зарегистрироваться</a></li>
+              <li><a href="sign_in.html">Войти</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="body-sec">
+        <div class="par-const-sgup">
+            <div class="const-sgup" id="cs">
+                <h1 class="h1sgup">Вход</h1>
+                <div class="sgup-e-mail">
+                    <form action=""> <input type="text" placeholder="введите e-mail"></form>
+                </div>
+                
+                <div class="sgup-e-mail">
+                    <form action=""> <input type="text" placeholder="введите пароль"></form>
+                </div>
+                
+                <div class="fm-btn" >
+                    <form action=""><button id="btnin">Войти</button></form>
+                </div>
+            
+            
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        
+    </footer>
+</body>
+</html>
