@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+from django.shortcuts import render
+>>>>>>> origin/main
 from django.shortcuts import render, redirect
 from django.utils import timezone
 
@@ -24,14 +28,14 @@ def add_event(request):
         form = EventForm()
     return render(request, 'events.html', {'form': form})
 ##############################################################
-def user_view(request):
+def userorg_view(request):
     if request.method == 'POST':
-        form = ParticipantsForm(request.POST)
+        form = User(request.POST)
         if form.is_valid():
             form.save()
             return redirect('participants')
     else:
-        form = ParticipantsForm()
+        form = UserOrgForm()
     return render(request, '.html', {'form': form})
 ##############################################################
 def ticket_view(request):
@@ -43,3 +47,7 @@ def ticket_view(request):
     else:
         form = TicketForm()
     return render(request, '.html', {'form': form})
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/main

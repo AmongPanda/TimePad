@@ -8,11 +8,13 @@ class Ticket(models.Model):
     price = models.DecimalField(max_digits=6, decimal_places=2, null=True, verbose_name='Цена билета')  # Цена билета
     tariff = models.CharField(max_length=50, null=True, verbose_name='Тариф билета')  # Тариф билета
 
+
     class Meta:
         verbose_name_plural = "Билеты"
         ordering = ['name']
     def __str__(self):
         return str(self.name)
+
 
 class Event(models.Model):
     name = models.CharField(max_length=200, null=True, verbose_name='Название мероприятия')  # Название мероприятия
@@ -46,7 +48,7 @@ class UserOrg(models.Model):
                                 verbose_name='Имя')  # Ссылка на стандартную модель пользователя Django
     phone_number = models.CharField(max_length=20, null=True,
                                     verbose_name='Номер телефона пользователя')  # Номер телефона пользователя
-    address = models.CharField(max_length=200, null=True, verbose_name='Адрес пользователя')  # Адрес пользователя
+    adress = models.CharField(max_length=200, null=True, verbose_name='Адрес пользователя')  # Адрес пользователя
     age_user = models.IntegerField(default=0, null=True, verbose_name='Возраст пользователя')
     event = models.ForeignKey(Event, on_delete=models.CASCADE, null=True, verbose_name='Выбери мероприятие')
 
@@ -56,3 +58,4 @@ class UserOrg(models.Model):
         ordering = ['user']
     def __str__(self):
         return str(self.user)
+
