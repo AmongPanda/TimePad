@@ -51,7 +51,6 @@ class UserOrg(models.Model):
     age_user = models.IntegerField(default=0, null=True, verbose_name='Возраст пользователя')
     event = models.ForeignKey(Event, on_delete=models.CASCADE, null=True, verbose_name='Выбери мероприятие')
 
-
     class Meta:
         verbose_name_plural = "Пользователи"
         ordering = ['user']
