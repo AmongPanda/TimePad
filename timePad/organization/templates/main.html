@@ -61,24 +61,25 @@
             </div>
 
             <div class="card">
-                {% for el in events %}
+
                 <div class="container-tape ct">
+                    {% for el in events %}
                     <div class="cont-tape">
-                        
+
                       <div class="url-tape ct-1 ">
 
                       </div>
-    
+
                         <div class="text-tape">
                             <div class="text-tape-center">
-                                <h5>el.name</h5>
+                                <h5>{{ el.name }}</h5>
                                 <p class="description-tape">
-                                    el.description
+                                    {{ el.description }}
                                 </p>
-                                <p class="price-tape">el.tickets.price</p>
-            
+                                <p class="price-tape">{{ el.tickets.price }}</p>
+
                                 <div class="date-watch">
-                                    <p>el.date</p>
+                                    <p>{{ el.date }}</p>
                                     <div class="eye-wach">
                                     <img src="./img/main/eye.svg" alt="" />
                                     <p>356</p>
@@ -87,104 +88,105 @@
                             </div>
                         </div>
                     </div>
+                    {% endfor %}
 
-                    <div class="cont-tape">
-                        <div class="url-tape ct-1 ">
-                          <a href="#">Техника</a>
-                        </div>
-      
-                          <div class="text-tape">
-                              <div class="text-tape-center">
-                                  <h5>Стиральная машинка Bosch</h5>
-                                  <p class="description-tape">
-                                      Уходящий год для айтишников прошёл под девизом: «Work
-                                      hard, learn more».
-                                  </p>
-                                  <p class="price-tape">1000 Р</p>
-              
-                                  <div class="date-watch">
-                                      <p>14 апреля 2021</p>
-                                      <div class="eye-wach">
-                                      <img src="./img/main/eye.svg" alt="" />
-                                      <p>356</p>
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
+<!--                    <div class="cont-tape">-->
+<!--                        <div class="url-tape ct-1 ">-->
+<!--                          <a href="#">Техника</a>-->
+<!--                        </div>-->
+<!--      -->
+<!--                          <div class="text-tape">-->
+<!--                              <div class="text-tape-center">-->
+<!--                                  <h5>Стиральная машинка Bosch</h5>-->
+<!--                                  <p class="description-tape">-->
+<!--                                      Уходящий год для айтишников прошёл под девизом: «Work-->
+<!--                                      hard, learn more».-->
+<!--                                  </p>-->
+<!--                                  <p class="price-tape">1000 Р</p>-->
+<!--              -->
+<!--                                  <div class="date-watch">-->
+<!--                                      <p>14 апреля 2021</p>-->
+<!--                                      <div class="eye-wach">-->
+<!--                                      <img src="./img/main/eye.svg" alt="" />-->
+<!--                                      <p>356</p>-->
+<!--                                      </div>-->
+<!--                                  </div>-->
+<!--                              </div>-->
+<!--                          </div>-->
+<!--                      </div>-->
 
 
-                      <div class="cont-tape">
+<!--                      <div class="cont-tape">-->
 
-      
-                          <div class="text-tape">
-                              <div class="text-tape-center">
-                                  <h5>Развлекательная програма в ТРЦ "НЕБО"</h5>
-                                  <p class="description-tape">
-                                      Невероятная программа В ТРЦ "НЕБО" ПРИХОДИТЕ!!!!!
-                                      
-                                  </p>
-                                  <p class="price-tape">1000 Р</p>
+<!--      -->
+<!--                          <div class="text-tape">-->
+<!--                              <div class="text-tape-center">-->
+<!--                                  <h5>Развлекательная програма в ТРЦ "НЕБО"</h5>-->
+<!--                                  <p class="description-tape">-->
+<!--                                      Невероятная программа В ТРЦ "НЕБО" ПРИХОДИТЕ!!!!!-->
+<!--                                      -->
+<!--                                  </p>-->
+<!--                                  <p class="price-tape">1000 Р</p>-->
 
-                                  <div class="button-container ">
-                                    <button class="buy-button" id="open-modal">Купить(УКАЗЫВАЕМ ЦЕНУ)</button>
+<!--                                  <div class="button-container ">-->
+<!--                                    <button class="buy-button" id="open-modal">Купить(УКАЗЫВАЕМ ЦЕНУ)</button>-->
 
-                                    
+<!--                                    -->
 
-                                    <div id="modal" class="modal">
-                                        <div class="modal-content">
-                                            <span class="close">&times;</span>
-                                            <div class="modal-image">
-                                              <div class="slider">
-                                                <div class="slides">
-                                                  <div class="slide"><img src="static/files/images/meropriyatie.png"></div>
-                                                  <div class="slide"><img src="static/files/images/parus.png"></div>
-                                                  <div class="slide"><img src="static/files/images/rose.png"></div>
-                                                </div>
-                                                <div class="controls">
-                                                  <button class="prev">Prev</button>
-                                                  <button class="next">Next</button>
-                                                </div>
-                                              </div>
-                                            </div>
-                                              <div class="modal-description">
-                                                <h3>Название товара</h3>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, sapien vel bibendum bibendum, velit sapien luctus velit, vel lacinia velit velit vel velit. Sed euismod, sapien vel bibendum bibendum, velit sapien luctus velit, vel lacinia velit velit vel velit.</p>
-                                                <p>Цена: 1000 Р</p>
-                                                <div class="button-container">
-                                                  <button class="buy-button">Купить</button>
-                                                </div>
-                                              </div>
-                                            </div>
-                                          </div>
-                                        </div>
-                                    </div>
-                                  </div>
-                                  
-              
-                                  <div class="date-watch">
-                                      <p>14 апреля 2021</p>
-                                      <div class="eye-wach">
-                                      <img src="./img/main/eye.svg" alt="" />
-                                      <p>356</p>
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
-                           
-                      </div>
+<!--                                    <div id="modal" class="modal">-->
+<!--                                        <div class="modal-content">-->
+<!--                                            <span class="close">&times;</span>-->
+<!--                                            <div class="modal-image">-->
+<!--                                              <div class="slider">-->
+<!--                                                <div class="slides">-->
+<!--                                                  <div class="slide"><img src="static/files/images/meropriyatie.png"></div>-->
+<!--                                                  <div class="slide"><img src="static/files/images/parus.png"></div>-->
+<!--                                                  <div class="slide"><img src="static/files/images/rose.png"></div>-->
+<!--                                                </div>-->
+<!--                                                <div class="controls">-->
+<!--                                                  <button class="prev">Prev</button>-->
+<!--                                                  <button class="next">Next</button>-->
+<!--                                                </div>-->
+<!--                                              </div>-->
+<!--                                            </div>-->
+<!--                                              <div class="modal-description">-->
+<!--                                                <h3>Название товара</h3>-->
+<!--                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, sapien vel bibendum bibendum, velit sapien luctus velit, vel lacinia velit velit vel velit. Sed euismod, sapien vel bibendum bibendum, velit sapien luctus velit, vel lacinia velit velit vel velit.</p>-->
+<!--                                                <p>Цена: 1000 Р</p>-->
+<!--                                                <div class="button-container">-->
+<!--                                                  <button class="buy-button">Купить</button>-->
+<!--                                                </div>-->
+<!--                                              </div>-->
+<!--                                            </div>-->
+<!--                                          </div>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                  </div>-->
+<!--                                  -->
+<!--              -->
+<!--                                  <div class="date-watch">-->
+<!--                                      <p>14 апреля 2021</p>-->
+<!--                                      <div class="eye-wach">-->
+<!--                                      <img src="./img/main/eye.svg" alt="" />-->
+<!--                                      <p>356</p>-->
+<!--                                      </div>-->
+<!--                                  </div>-->
+<!--                              </div>-->
+<!--                          </div>-->
+<!--                           -->
+<!--                      </div>-->
 
-                      
-                </div>    
-                
-            
-            </div>
+<!--                      -->
+<!--                </div>    -->
+<!--                -->
+<!--            -->
+<!--            </div>-->
 
-            <div class="foot-div">
-                <h3 class="h3-foot">Обращайтесь за помощью!</h3>
-                <img src="files/free-icon-phone-call-5585856.png" alt="">
-                
-            </div>
+<!--            <div class="foot-div">-->
+<!--                <h3 class="h3-foot">Обращайтесь за помощью!</h3>-->
+<!--                <img src="files/free-icon-phone-call-5585856.png" alt="">-->
+<!--                -->
+<!--            </div>-->
         </div>
         
     </section>

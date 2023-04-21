@@ -14,7 +14,7 @@ def events(request):
         form = EventForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('main.html')
+            return render('main')
     else:
         form = EventForm()
     return render(request, 'events.html', {'form': form})
