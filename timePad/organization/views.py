@@ -14,7 +14,7 @@ from django.urls import reverse_lazy
 
 
 def main(request):
-    events = Event.objects.all()
+    events = Event.objects.order_by('-date')
     return render(request, 'main.html', {'events': events})
 
 
