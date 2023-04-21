@@ -8,7 +8,7 @@ from django.contrib.auth.models import User
 class EventForm(forms.ModelForm):
     class Meta:
         model = Event
-        fields = ['name', 'description', 'date', 'tickets']
+        fields = ['name', 'description', 'date', 'tickets', 'image', 'age']
         widgets = {
             'date': DateInput(attrs={'type': 'date'})
         }

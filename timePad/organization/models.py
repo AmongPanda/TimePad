@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.core.validators import MinValueValidator
 
 
 class Ticket(models.Model):
@@ -21,7 +22,8 @@ class Event(models.Model):
     description = models.TextField(null=True, verbose_name='Описание мероприятия')  # Описание мероприятия
     date = models.DateTimeField(null=True, verbose_name='Дата и время мероприятия')  # Дата и время мероприятия
     tickets = models.ForeignKey(Ticket, on_delete=models.CASCADE,null=True, verbose_name='Доступные билеты для мероприятия')  # Доступные билеты для мероприятия
-
+    image = models.ImageField(null=True, upload_to='media')
+    age = models.IntegerField(validators=[MinValueValidator(0)] , null=True, verbose_name='Возрастной ценз')
 
     class Meta:
         verbose_name_plural = "Мероприятия"
@@ -51,6 +53,7 @@ class UserOrg(models.Model):
     adress = models.CharField(max_length=200, null=True, verbose_name='Адрес пользователя')  # Адрес пользователя
     age_user = models.IntegerField(default=0, null=True, verbose_name='Возраст пользователя')
     event = models.ForeignKey(Event, on_delete=models.CASCADE, null=True, verbose_name='Выбери мероприятие')
+
 
 
     class Meta:
