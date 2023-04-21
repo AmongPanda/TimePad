@@ -14,7 +14,7 @@ def events(request):
         form = EventForm(request.POST)
         if form.is_valid():
             form.save()
-            return render('main')
+            return redirect('main')
     else:
         form = EventForm()
     return render(request, 'events.html', {'form': form})
@@ -27,10 +27,10 @@ def user_org(request):
         form = User(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('participants')
+            return redirect('main')
     else:
         form = UserOrgForm()
-    return render(request, '.html', {'form': form})
+    return render(request, 'registration.html', {'form': form})
 
 
 ##############################################################
@@ -39,7 +39,7 @@ def tickets(request):
         form = TicketForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('ticket')
+            return redirect('main')
     else:
         form = TicketForm()
-    return render(request, '.html', {'form': form})
+    return render(request, 'tickets.html', {'form': form})
